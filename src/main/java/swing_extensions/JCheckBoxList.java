@@ -1,5 +1,6 @@
 package swing_extensions;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -20,6 +21,7 @@ public class JCheckBoxList extends JPanel {
 	 * @param data A String array containing the text for each JCheckBox
 	 */
 	public JCheckBoxList(String[] data) {
+		this.setBackground(Color.WHITE);
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		this.setData(data);
