@@ -65,7 +65,7 @@ public class JCheckBoxList extends JPanel {
 	/**
 	 * Gets the JCheckBox at the provided index.
 	 * @param index Index at which the JCheckBox is located
-	 * @return the JCheckBox at the procided index
+	 * @return the JCheckBox at the provided index
 	 */
 	public JCheckBox get(int index) {
 		return this.checkBoxes.get(index);
