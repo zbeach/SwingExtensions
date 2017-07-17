@@ -32,7 +32,7 @@ public class JCheckBoxList extends JPanel {
 	 * @param data A String array containing the text for each JCheckBox
 	 */
 	public void setData(String[] data) {
-		this.checkBoxes = new ArrayList<JCheckBox>();
+		this.checkBoxes.clear();
 	
 		for (int i = 0; i < data.length; i++) {
 			this.checkBoxes.add(new JCheckBox(data[i]));

@@ -33,7 +33,7 @@ public class JRadioButtonList extends JPanel {
 	 * @param data A String array containing the text for each JRadioButton
 	 */
 	public void setData(String[] data) {
-		this.radioButtons = new ArrayList<JRadioButton>();
+		this.radioButtons.clear();
 	
 		for (int i = 0; i < data.length; i++) {
 			this.radioButtons.add(new JRadioButton(data[i]));
