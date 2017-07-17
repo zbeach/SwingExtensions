@@ -34,3 +34,7 @@ build/reports/tests/test/classes/LibraryTest.html
 build/tmp/createMainJar/MANIFEST.MF
 
 build/tmp/jar/MANIFEST.MF
+
+build/tmp/test/jar_extract_193844489163456248_tmp
+
+build/libs/swing_extensions.jar

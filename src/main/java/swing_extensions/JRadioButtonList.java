@@ -1,5 +1,6 @@
 package swing_extensions;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -21,12 +22,10 @@ public class JRadioButtonList extends JPanel {
 	 * @param data A String array containing the text for each JRadioButton
 	 */
 	public JRadioButtonList(String[] data) {
-		this.radioButtons = new ArrayList<JRadioButton>();
+		this.setBackground(Color.WHITE);
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
-		for (int i = 0; i < data.length; i++) {
-			this.radioButtons.add(new JRadioButton(data[i]));
-			this.add(radioButtons.get(i));
-		}
+		this.setData(data);
 	}
 	
 	/**
