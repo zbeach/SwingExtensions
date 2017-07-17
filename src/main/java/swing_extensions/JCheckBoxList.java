@@ -34,6 +34,7 @@ public class JCheckBoxList extends JPanel {
 	 */
 	public void setData(String[] data) {
 		this.checkBoxes.clear();
+		this.removeAll();
 	
 		for (int i = 0; i < data.length; i++) {
 			this.checkBoxes.add(new JCheckBox(data[i]));
