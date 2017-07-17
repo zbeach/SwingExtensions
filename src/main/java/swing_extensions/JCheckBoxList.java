@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class JCheckBoxList extends JPanel {
 	// Check boxes
-	private ArrayList<JCheckBox> checkBoxes;
+	private ArrayList<JCheckBox> checkBoxes = null;
 	
 	/**
 	 * Constructs a JCheckBoxList object with an empty data set.
@@ -24,6 +24,7 @@ public class JCheckBoxList extends JPanel {
 		this.setBackground(Color.WHITE);
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
+		this.checkBoxes = new ArrayList<JCheckBox>();
 		this.setData(data);
 	}
 	

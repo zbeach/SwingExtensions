@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class JRadioButtonList extends JPanel {
 	// Radio buttons
-	private ArrayList<JRadioButton> radioButtons;
+	private ArrayList<JRadioButton> radioButtons = null;
 	
 	/**
 	 * Constructs a JRadioButtonList object with an empty data set.
@@ -25,6 +25,7 @@ public class JRadioButtonList extends JPanel {
 		this.setBackground(Color.WHITE);
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
+		this.radioButtons = new ArrayList<JRadioButton>();
 		this.setData(data);
 	}
 	
