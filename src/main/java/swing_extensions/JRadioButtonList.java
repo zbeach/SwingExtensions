@@ -35,6 +35,7 @@ public class JRadioButtonList extends JPanel {
 	 */
 	public void setData(String[] data) {
 		this.radioButtons.clear();
+		this.removeAll();
 	
 		for (int i = 0; i < data.length; i++) {
 			this.radioButtons.add(new JRadioButton(data[i]));
@@ -104,9 +105,21 @@ public class JRadioButtonList extends JPanel {
 	 */
 	public void select(int index) {
 		// Deselect all radio buttons
+		this.deselectAll();
+		
+		// Select radio button at index
+		this.radioButtons.get(index).setSelected(true);
+	}
+	
+	public void deselectAll() {
+		// Deselect all radio buttons
 		for (int i = 0; i < this.radioButtons.size(); i++)
 			this.radioButtons.get(i).setSelected(false);
-		
-		this.radioButtons.get(index).setSelected(true);
+	}
+	
+	@Override
+	public void setEnabled(boolean enabled) {
+		for (int i = 0; i < this.radioButtons.size(); i++)
+			this.radioButtons.get(i).setEnabled(enabled);
 	}
 }
