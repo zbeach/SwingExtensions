@@ -1,6 +1,7 @@
 package swing_extensions;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -8,6 +9,8 @@ import javax.swing.*;
 public class JCheckBoxList extends JPanel {
 	// Check boxes
 	private ArrayList<JCheckBox> checkBoxes = null;
+	// Action listener
+	private ActionListener actionListener = null;
 	
 	/**
 	 * Constructs a JCheckBoxList object with an empty data set.
@@ -40,6 +43,8 @@ public class JCheckBoxList extends JPanel {
 			this.checkBoxes.add(new JCheckBox(data[i]));
 			this.add(checkBoxes.get(i));
 		}
+		
+		this.addActionListener(this.actionListener);
 	}
 	
 	/**
@@ -137,5 +142,19 @@ public class JCheckBoxList extends JPanel {
 	public void deselectAll() {
 		for (int i = 0; i < this.checkBoxes.size(); i++)
 			this.deselect(i);
+	}
+	
+	/**
+	 * Gets the number of check boxes.
+	 * @return the number of check boxes
+	 */
+	public int length() {
+		return this.checkBoxes.size();
+	}
+	
+	public void addActionListener(ActionListener actionListener) {
+		this.actionListener = actionListener;
+		for (int i = 0; i < this.checkBoxes.size(); i++)
+			this.checkBoxes.get(i).addActionListener(this.actionListener);
 	}
 }

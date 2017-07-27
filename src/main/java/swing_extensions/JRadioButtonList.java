@@ -1,6 +1,7 @@
 package swing_extensions;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -8,6 +9,8 @@ import javax.swing.*;
 public class JRadioButtonList extends JPanel {
 	// Radio buttons
 	private ArrayList<JRadioButton> radioButtons = null;
+	// Button group
+	private ButtonGroup buttonGroup = new ButtonGroup();
 	
 	/**
 	 * Constructs a JRadioButtonList object with an empty data set.
@@ -33,13 +36,14 @@ public class JRadioButtonList extends JPanel {
 	 * Sets the data on which the JRadioButtonList is built.
 	 * @param data A String array containing the text for each JRadioButton
 	 */
-	public void setData(String[] data) {
+	public void setData(Object[] data) {
 		this.radioButtons.clear();
 		this.removeAll();
 	
 		for (int i = 0; i < data.length; i++) {
-			this.radioButtons.add(new JRadioButton(data[i]));
-			this.add(radioButtons.get(i));
+			this.radioButtons.add(new JRadioButton(data[i].toString()));
+			this.add(this.radioButtons.get(i));
+			this.buttonGroup.add(this.radioButtons.get(i));
 		}
 	}
 	
@@ -112,14 +116,25 @@ public class JRadioButtonList extends JPanel {
 	}
 	
 	public void deselectAll() {
-		// Deselect all radio buttons
-		for (int i = 0; i < this.radioButtons.size(); i++)
-			this.radioButtons.get(i).setSelected(false);
+		this.buttonGroup.clearSelection();
 	}
 	
 	@Override
 	public void setEnabled(boolean enabled) {
 		for (int i = 0; i < this.radioButtons.size(); i++)
 			this.radioButtons.get(i).setEnabled(enabled);
+	}
+	
+	/**
+	 * Gets the number of radio buttons.
+	 * @return the number of radio buttons
+	 */
+	public int length() {
+		return this.radioButtons.size();
+	}
+
+	public void addActionListener(ActionListener listener) {
+		for (int i = 0; i < this.radioButtons.size(); i++)
+			this.radioButtons.get(i).addActionListener(listener);
 	}
 }
