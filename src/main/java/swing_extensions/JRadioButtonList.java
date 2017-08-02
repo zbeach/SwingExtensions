@@ -33,6 +33,21 @@ public class JRadioButtonList extends JPanel {
 	}
 	
 	/**
+	 * Constructs a JRadioButtonList object, sets the data on which it's built,
+	 * and selects the button at the provided index.
+	 * @param data A String array containing the text for each JRadioButton
+	 * @param selectionIndex Index of the button to select
+	 * @throws IndexOutOfBoundsException
+	 */
+	public JRadioButtonList(String[] data, int selectionIndex) throws IndexOutOfBoundsException {
+		this(new String[0]);
+		
+		if (selectionIndex >= 0 && selectionIndex < data.length)
+			this.select(selectionIndex);
+		else throw new IndexOutOfBoundsException();
+	}
+	
+	/**
 	 * Sets the data on which the JRadioButtonList is built.
 	 * @param data A String array containing the text for each JRadioButton
 	 */
