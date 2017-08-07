@@ -1,6 +1,5 @@
 package swing_extensions;
 
-import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
@@ -25,7 +24,6 @@ public class JRadioButtonList extends JPanel {
 	 * @param data A String array containing the text for each JRadioButton
 	 */
 	public JRadioButtonList(String[] data) {
-		this.setBackground(Color.WHITE);
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		this.radioButtons = new ArrayList<JRadioButton>();
