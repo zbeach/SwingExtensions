@@ -31,6 +31,10 @@ build/reports/tests/test/classes/LibraryTest.html
 
 *.xml
 
+build/docs
+
+build/tmp/makeJavadocs/javadoc.options
+
 build/tmp/createMainJar/MANIFEST.MF
 
 build/tmp/jar/MANIFEST.MF
