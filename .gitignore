@@ -31,6 +31,8 @@ build/reports/tests/test/classes/LibraryTest.html
 
 *.xml
 
+_config.yml
+
 build/docs
 
 build/tmp/makeJavadocs/javadoc.options
