@@ -13,13 +13,7 @@
 
 *.prefs
 
-build/jars/main/jar/api/main.jar
-
-build/jars/main/jar/main.jar
-
-build/libs/SwingExtensions.jar
-
-build/reports/tests/test/classes/LibraryTest.html
+build
 
 *.css
 
@@ -32,15 +26,3 @@ build/reports/tests/test/classes/LibraryTest.html
 *.xml
 
 _config.yml
-
-build/docs
-
-build/tmp/makeJavadocs/javadoc.options
-
-build/tmp/createMainJar/MANIFEST.MF
-
-build/tmp/jar/MANIFEST.MF
-
-build/tmp/test/jar_extract_193844489163456248_tmp
-
-build/libs/swing_extensions.jar
