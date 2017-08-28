@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'swing_extensions'
+rootProject.name = 'swing-extensions'
