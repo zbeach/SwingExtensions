@@ -29,21 +29,19 @@ public class JCheckBoxList extends JPanel {
 		this.checkBoxes = new ArrayList<JCheckBox>();
 		this.setData(data);
 	}
-	
+
 	/**
 	 * Sets the data on which the JCheckBoxList is built.
-	 * @param data A String array containing the text for each JCheckBox
+	 * @param data An Object array containing the text for each JCheckBox
 	 */
-	public void setData(String[] data) {
+	public void setData(Object[] data) {
 		this.checkBoxes.clear();
 		this.removeAll();
-	
+
 		for (int i = 0; i < data.length; i++) {
-			this.checkBoxes.add(new JCheckBox(data[i]));
-			this.add(checkBoxes.get(i));
+			this.checkBoxes.add(new JCheckBox(data[i].toString()));
+			this.add(this.checkBoxes.get(i));
 		}
-		
-		this.addActionListener(this.actionListener);
 	}
 	
 	/**
